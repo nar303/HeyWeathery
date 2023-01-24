@@ -24,7 +24,6 @@ class WeatherViewController: UIViewController {
     private let weatherManager = WeatherManager()
     private let cacheManager = CacheManager()
     
-    
     private lazy var locationManager: CLLocationManager = {
         let manager = CLLocationManager()
         manager.delegate = self
@@ -71,8 +70,6 @@ class WeatherViewController: UIViewController {
         alertController.addAction(cancelAction)
         self.present(alertController, animated: true)
     }
-    
-    
     
     func updateView(with data: WeatherModel) {
         hideAnimation()
